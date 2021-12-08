@@ -6,10 +6,6 @@ from googleapiclient.discovery import build
 from pytube import YouTube
 from spotipy.oauth2 import SpotifyClientCredentials, SpotifyOAuth
 
-clientID = "71fcdce46d384e12abd61e29c3df7835"
-ClientSecret = "d3f665f7655546d0813c64834099cfc3"
-youtubeAPI = "AIzaSyBxnnmVCY_HLLXWTvZw6_4j4-dWrBkA2Vs"
-youtubeAPI2 = "AIzaSyB9Pidr1gaRgEAE9VO3US1G2KM7p-oKUCY"
 song_id_list = []
 
 #search the playlist from spotify
