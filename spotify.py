@@ -20,6 +20,7 @@ results = sp.playlist_tracks(playlist_id=playlist, fields="items(track.name, tra
 song_list=results["items"]
 
 #puts all the song searched to into a playlist
+#searches the song name by the author
 for i in range(len(song_list)):
     song_name = song_list[i]["track"]["name"]
     author = song_list[i]["track"]["artists"]
