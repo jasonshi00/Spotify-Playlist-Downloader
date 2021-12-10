@@ -1,11 +1,20 @@
 """ A program to download all spotify songs in a playlist by searching it through youtube and downloading it\
     testing 2
 """
+import os
 import spotipy
 from googleapiclient.discovery import build
 from pytube import YouTube
 from spotipy.oauth2 import SpotifyClientCredentials, SpotifyOAuth
+from dotenv import load_dotenv
 
+load_dotenv()
+
+clientID = os.getenv('CLIENTID')
+ClientSecret = os.getenv('CLIENTSECRET')
+youtubeAPI = os.getenv('YOUTUBEAPI')
+youtubeAPI2 = os.getenv('YOUTUBEAPI2')
+=======
 song_id_list = []
 
 #search the playlist from spotify
@@ -16,6 +25,7 @@ results = sp.playlist_tracks(playlist_id=playlist, fields="items(track.name, tra
 song_list=results["items"]
 
 #puts all the song searched to into a playlist
+#searches the song name by the author
 for i in range(len(song_list)):
     song_name = song_list[i]["track"]["name"]
     author = song_list[i]["track"]["artists"]
